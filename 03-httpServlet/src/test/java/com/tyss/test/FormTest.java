@@ -28,13 +28,13 @@ public class FormTest {
         Thread.sleep(2000);
 
         // 4. Enter age
-        driver.findElement(By.name("age"))
+        driver.findElement(By.id("age"))
               .sendKeys("25");
 
         Thread.sleep(2000);
 
         // 5. Enter email
-        driver.findElement(By.name("email"))
+        driver.findElement(By.xpath("//input[@name='email']"))
               .sendKeys("ankit@gmail.com");
 
         Thread.sleep(2000);
@@ -45,15 +45,22 @@ public class FormTest {
 
         Thread.sleep(2000);
 
+       
+        //8. new applying linkText
+        driver.findElement(By.linkText("anchar tag")).click();
+        Thread.sleep(3000);
+        
+        // navigate to previous page.
+        driver.navigate().back();
+        Thread.sleep(3000);
+        // 8. Print current URL
+        System.out.println("Current URL: " + driver.getCurrentUrl());
         // 7. Click Submit
         driver.findElement(By.cssSelector("button[type='submit']"))
               .click();
 
         Thread.sleep(3000);
-
-        // 8. Print current URL
-        System.out.println("Current URL: " + driver.getCurrentUrl());
-
+        
         // 9. Close browser
         driver.quit();
     }

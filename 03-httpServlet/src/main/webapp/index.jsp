@@ -7,7 +7,7 @@
     <br>
 
     AGE:
-    <input type="text" placeholder="your age" name="age"/>
+    <input type="text" placeholder="your age" id="age"/>
     <br>
 
     EMAIL:
@@ -18,9 +18,11 @@
     <input type="text" placeholder="your phone number" name="phone"/>
     <br>
 
-    <button type="submit">Submit</button>
 
+    <button type="submit">Submit</button>
 </form>
+
+<a href="https://mvnrepository.com/">anchar tag</a>
 </body>
 </html>
 
