@@ -21,36 +21,39 @@ public class FormTest {
         // Wait so you can see the page
         Thread.sleep(2000);
 
-        // 3. Enter name
+        // 3. by name selector
         driver.findElement(By.name("username"))
               .sendKeys("Ankit");
 
         Thread.sleep(2000);
 
-        // 4. Enter age
+        // 4. by age selector
         driver.findElement(By.id("age"))
               .sendKeys("25");
 
         Thread.sleep(2000);
 
-        // 5. Enter email
+        // 5. by x-Path selector
         driver.findElement(By.xpath("//input[@name='email']"))
               .sendKeys("ankit@gmail.com");
 
         Thread.sleep(2000);
 
-        // 6. Enter phone
-        driver.findElement(By.name("phone"))
+        // 6. by css selector
+        driver.findElement(By.cssSelector(".by.css.selector"))
               .sendKeys("9876543210");
 
         Thread.sleep(2000);
 
-       
-        //8. new applying linkText
+        
+        // by class name selector
+        driver.findElement(By.className("address")).sendKeys("eknath chal nehru nagar");
+        //8 navigate to previous page.
+        
+        //7. by linkText selector
         driver.findElement(By.linkText("anchar tag")).click();
         Thread.sleep(3000);
-        
-        // navigate to previous page.
+        //navigate back to main ,form maven repository.
         driver.navigate().back();
         Thread.sleep(3000);
         // 8. Print current URL

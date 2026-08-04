@@ -15,10 +15,12 @@
     <br>
 
     PHONE:
-    <input type="text" placeholder="your phone number" name="phone"/>
+    <input class="by css selector" type="text" placeholder="your phone number" name="phone"/>
     <br>
 
-
+    ADDRESS:
+    <input class="address" type="text" placeholder="your address">
+    <br>
     <button type="submit">Submit</button>
 </form>
 
