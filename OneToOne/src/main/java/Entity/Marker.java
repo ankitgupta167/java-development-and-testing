@@ -4,28 +4,23 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Book {
+public class Marker {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String title;
+	private String color;
 	private double price;
 	
-	@ManyToOne
-	Library library;
-	
-	public Book() {
+	public Marker() {
 		
 	}
-	public Book( String title, double price, Library library) {
+
+	public Marker(String color, double price) {
 		
-		
-		this.title = title;
+		this.color = color;
 		this.price = price;
-		this.library = library;
 	}
 
 	public int getId() {
@@ -36,12 +31,12 @@ public class Book {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getColor() {
+		return color;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	public double getPrice() {
@@ -51,14 +46,7 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
-	public Library getLibrary() {
-		return library;
-	}
-
-	public void setLibrary(Library library) {
-		this.library = library;
-	}
+	
 	
 	
 }
