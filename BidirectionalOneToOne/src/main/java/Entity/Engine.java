@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Engine {
@@ -12,14 +13,26 @@ public class Engine {
 	private int id;
 	private String type;
 	private int hp;
+	@OneToOne(mappedBy ="engine" )
+	private Car car;
+	
 	public Engine() {
 		
 	}
 
-	public Engine( String type, int hp) {
+	public Engine( String type, int hp,Car car) {
 		
 		this.type = type;
 		this.hp = hp;
+		this.car=car;
+	}
+
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
 	}
 
 	public int getId() {

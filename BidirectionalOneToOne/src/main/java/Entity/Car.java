@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 @Entity
 public class Car {
@@ -13,6 +14,7 @@ public class Car {
 	private String brand;
 	private double price;
 	@OneToOne
+	@JoinColumn(name = "eng_id")
 	private Engine engine;
 	
 	public Car() {
