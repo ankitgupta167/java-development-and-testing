@@ -12,12 +12,12 @@ public static void main(String[] args) {
 	EntityManager em=emf.createEntityManager();
 	EntityTransaction et= em.getTransaction();
 	
-	Engine e1=new Engine("petrol",1200);
-	Car c1= new Car("bmw", 1000, e1);
-	et.begin();
-	em.persist(e1);
-	em.persist(c1);
 	
-	et.commit();
+	Car car= em.find(Car.class, 1);
+//	Engine e=car.getEngine();
+	
+	System.out.println(car);
+//	System.out.println(e);
 }
+	
 }
