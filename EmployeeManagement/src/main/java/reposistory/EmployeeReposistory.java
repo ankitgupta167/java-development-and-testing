@@ -29,7 +29,8 @@ public class EmployeeReposistory {
     	Employee employee= em.find(Employee.class, id);
     	if(employee !=null) {
     		return employee;
-    	}else {
+    	}
+    	else {
     		throw new  EmployeeNotFoundException("Employee not found");
     	}
     	
@@ -48,7 +49,6 @@ public class EmployeeReposistory {
 		et.rollback();
 		}
     	return employee;
-    	
     }
     
     public void deleteEmployee(int id) {
