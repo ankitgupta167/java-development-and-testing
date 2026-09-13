@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Mobile {
-	// this is called field injection ,because we are providing the value using the field , so this is called field injection
+	
+// this is called field injection ,because we are providing the value using the field , so this is called field injection
 //	@Value("101")
 //	private int id;
 //	@Value("RealMe")
@@ -13,6 +14,7 @@ public class Mobile {
 //	@Value("20000")
 //	private double price;
 //	
+	
 	// this code is for setter injection , because we are providing the value using setter mathod
 //	private int id;
 //	private String brand;
@@ -44,9 +46,10 @@ public class Mobile {
 //	@Value("120000")
 //	public void setPrice(double price) {
 //		this.price = price;
-//	}
+//	}	
 	
-//	
+	
+//	this is my constructor injection , because we are providing the value using the constructor so it is called constructor injection
 	private int id;
 	private String brand;
 	private double price;

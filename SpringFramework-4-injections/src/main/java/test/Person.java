@@ -18,7 +18,7 @@ public class Person {
 //		return id;
 //	}
 
-	// this is my setter injection code
+// this is my setter injection code
 //	private int id;
 //	private String name;
 //	private Mobile mobile;
@@ -46,12 +46,13 @@ public class Person {
 //	public void setMobile(Mobile mobile) {
 //		this.mobile = mobile;
 //	}
-	
+//	this is my constructor injection , because we are providing the value using the constructor so it is called constructor injection	
+//	constructor injection is mostly used, we can say mostly preferred
 	private int id;
 	private String name;
 	private Mobile mobile;
 	
-	public Person(@Value("101") int id,@Value("dhiraj") String name,@Autowired Mobile mobile) {
+	public Person(@Value("100") int id,@Value("dhiraj") String name,@Autowired Mobile mobile) {
 		
 		this.id = id;
 		this.name = name;

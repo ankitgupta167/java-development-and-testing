@@ -2,7 +2,7 @@ package demo;
 
 import org.springframework.stereotype.Component;
 
-@Component("emp")
+@Component()
 public class Employee {
 
 }
