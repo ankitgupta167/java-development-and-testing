@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 public class Car {
 
 	@Autowired
-	@Qualifier("petrolEngine")
+	@Qualifier("dieselEngine")
 	public Engine e;
 }
